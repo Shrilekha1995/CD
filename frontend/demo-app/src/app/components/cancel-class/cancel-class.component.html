@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="row">
+    <div class="offset-3"></div>
+    <div class="col-md-6">
+      <form  #cancelForm="ngForm" name="form" #f="ngForm" novalidate class="module-form">
+        
+       
+        <div class="form-group">
+          <label for="msg">Message body</label>
+          <input type="text"
+                  id="msg"
+                  class="form-control"
+                  name="message"
+                  [(ngModel)]="cancel.message"
+                  placeholder="msg" required>
+                  <span id="color" [hidden]="cancel.message">Please Enter A Message.</span>
+                  <br/>
+      </div>
+     
+    <button (click)="cancelClass(cancel,cancelForm)" class="btn btn-info pull-right" [disabled]="!cancel.message">
+          
+      <span>send</span> 
+   </button>
+ </form>
+</div>
+</div>
+</div>
+<a style="color:blue" routerLink="/facultydashboard">Back</a>

@@ -1,0 +1,150 @@
+<div class="container">
+        <div class="row">
+          <div class="offset-3"></div>
+          <div class="col-md-6">
+            <form  #roomForm="ngForm" name="form" #f="ngForm" novalidate class="room-form">
+                <div class="form-group">
+                    <label for="coordinates1lat">Course ID</label>
+                    <input type="number"
+                            id="courseId"
+                            class="form-control"
+                            name="courseId"
+                            [(ngModel)]="room.courseId"
+                            placeholder="Course Id" required>
+                            <span [hidden]="room.courseId">Please Enter courseId.</span>
+                            <br/>
+                </div>
+             
+              <div class="form-group">
+                <label for="coordinates1lat">coord1_lat</label>
+                <input type="number"
+                        id="coordinates1"
+                        class="form-control"
+                        name="coordinates1"
+                        [(ngModel)]="room.coord1Lat"
+                        placeholder="coord1_lat" required>
+                        <span [hidden]="room.coord1Lat">Please Enter Coordinate 1 Latitude.</span>
+                            <br/>
+            </div>
+            <div class="form-group">
+                <label for="coordinates1long">coord1_long</label>
+                <input type="number"
+                        id="coordinates1long"
+                        class="form-control"
+                        name="coordinates1long"
+                        [(ngModel)]="room.coord1Long"
+                        placeholder="coord1_long" required>
+                        <span [hidden]="room.coord1Long">Please Enter Coordinate 1 Longitutde.</span>
+                            <br/>
+            </div>
+            <div class="form-group">
+                <label for="coordinates2lat">coord2_lat</label>
+                <input type="number"
+                        id="coordinates1lat"
+                        class="form-control"
+                        name="coordinates1lat"
+                        [(ngModel)]="room.coord2Lat"
+                        placeholder="coord2_Lat" required>
+                        <span [hidden]="room.coord2Lat">Please Enter Coordinate 2 Latitude.</span>
+                            <br/>
+            </div>
+            <div class="form-group">
+                <label for="coordinates2long">coord2_long</label>
+                <input type="number"
+                        id="coordinates2long"
+                        class="form-control"
+                        name="coordinates2long"
+                        [(ngModel)]="room.coord2Long"
+                        placeholder="coord2_Long" required>
+                        <span [hidden]="coord2Long">Please Enter Coordinate 2 Longitutde.</span>
+                            <br/>
+            </div>
+            <div class="form-group">
+                <label for="coordinates3lat">coord3_lat</label>
+                <input type="number"
+                        id="coordinates3lat"
+                        class="form-control"
+                        name="coordinates3lat"
+                        [(ngModel)]="room.coord3Lat"
+                        placeholder="coord3_Lat" required>
+                        <span [hidden]="room.coord3Lat">Please Enter Coordinate 3 Latitude.</span>
+                            <br/>
+            </div>
+            <div class="form-group">
+                <label for="coordinates3long">coord3_long</label>
+                <input type="number"
+                        id="coordinates3long"
+                        class="form-control"
+                        name="coordinates3long"
+                        [(ngModel)]="room.coord3Long"
+                        placeholder="coord3_Long" required>
+            </div>
+            <div class="form-group">
+                <label for="coordinates4lat">coord4_lat</label>
+                <input type="number"
+                        id="coordinates4lat"
+                        class="form-control"
+                        name="coordinates4lat"
+                        [(ngModel)]="room.coord4Lat"
+                        placeholder="coord4_Lat" required>
+            </div>
+            <div class="form-group">
+                <label for="coordinates4long">coord4_long</label>
+                <input type="number"
+                        id="coordinates4long"
+                        class="form-control"
+                        name="coordinates4long"
+                        [(ngModel)]="room.coord4Long"
+                        placeholder="coord4_Long" required>
+            </div>
+        
+            <div class="form-group">
+                <label for="coordinates5lat">coord5_lat</label>
+                <input type="number"
+                        id="coordinates5lat"
+                        class="form-control"
+                        name="coordinates5lat"
+                        [(ngModel)]="room.coord5Lat"
+                        placeholder="coord5_Lat" required>
+            </div>
+            <div class="form-group">
+                <label for="coordinates5long">coord5_long</label>
+                <input type="number"
+                        id="coordinates5long"
+                        class="form-control"
+                        name="coordinates5long"
+                        [(ngModel)]="room.coord5Long"
+                        placeholder="coord5_Long" required>
+            </div>
+     
+            <div class="form-group">
+                <label for="coordinates6lat">coord6_lat</label>
+                <input type="number"
+                        id="coordinates6lat"
+                        class="form-control"
+                        name="coordinates6lat"
+                        [(ngModel)]="room.coord6Lat"
+                        placeholder="coord6_Lat" required>
+            </div>
+            <div class="form-group">
+                <label for="coordinates6long">coord6_long</label>
+                <input type="number"
+                        id="coordinates6long"
+                        class="form-control"
+                        name="coordinates6long"
+                        [(ngModel)]="room.coord6Long"
+                        placeholder="coord6_Long" required>
+            </div>
+    
+    
+    
+          <button (click)="saveRoomData(room,roomForm)" class="btn btn-info pull-right" [disabled]="!room.courseId || !room.coord1Lat || !room.coord1Long || !room.coord2Lat || !room.coord2Long || !room.coord3Lat || !room.coord3Long || !room.coord4Lat || !room.coord4Long || !room.coord5Lat || !room.coord5Long || !room.coord6Lat || !room.coord6Long">
+                
+            <span>next->></span> 
+         </button>
+       </form>
+      </div>
+      </div>
+      </div>
+      <a style="color:blue" routerLink="/admindashboard">Back</a>
+      

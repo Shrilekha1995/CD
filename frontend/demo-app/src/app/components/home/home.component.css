@@ -1,0 +1,59 @@
+header {
+    padding: 154px 0 100px;
+  }
+  
+  @media (min-width: 992px) {
+    header {
+      padding: 156px 0 100px;
+    }
+  }
+  
+  section {
+    padding: 150px 0;
+  }
+
+  .row{
+        border: 1px solid;
+        float:left;
+        width:350px;
+        height:250px;
+        margin-left:20px;
+        margin-right:5px;
+        border-radius: 5%;
+
+  }
+
+  .card-deck{
+    height: 500px;
+  }
+
+  #wrapper{
+    display:inline;
+        text-align:center;
+       
+  }
+
+  #wrapper:after {
+    content: "";
+    display: block;
+    height: 50px; /* the footer's total height */
+  }
+  
+  #wrapper .row:hover {
+   
+     color: white;
+     border:4px solid black;
+     font-family: 'Times New Roman', Times, serif;
+     font-size: xx-large;
+     font-weight: 400;
+   
+  }
+
+  #wrapper .row:hover a {
+   
+    color: white;
+    font-family:'Times New Roman', Times, serif;
+    font-size: xx-large;
+    font-weight: 400;
+  
+ }

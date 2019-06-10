@@ -1,0 +1,79 @@
+<div class="container">
+    <div class="row">
+      <div class="offset-3"></div>
+      <div class="col-md-6">
+<form #userForm="ngForm" name="form">
+  <div class="form-group">
+    <label for="firstName">FirstName</label>
+    <input type="text" class="form-control" id="firstName"
+    [(ngModel)]="user.firstName" name="firstName">
+    <span [hidden]="user.firstName">Please Enter FirstName.</span>
+                        <br/>
+  </div>  
+
+  <div class="form-group">
+      <label for="lastName">LastName</label>
+      <input type="text" class="form-control" id="lastName"
+      [(ngModel)]="user.lastName" name="lastName">
+      <span [hidden]="user.lastName">Please Enter LastName.</span>
+                        <br/>
+    </div> 
+    
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email"
+        [(ngModel)]="user.email" name="email">
+        <span [hidden]="user.email">Please Enter Email.</span>
+                        <br/>
+      </div>  
+
+      <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" class="form-control" id="password"
+          [(ngModel)]="user.password" name="password">
+          <span [hidden]="user.password">Please Enter Password.</span>
+                        <br/>
+        </div>  
+
+        <div class="form-group">
+            <label for="contactNumber">Contact No.</label>
+            <input type="text" class="form-control" id="contactNumber"
+            [(ngModel)]="user.contactNumber" name="contactNumber">
+            <span [hidden]="user.contactNumber">Please Enter Contact Number.</span>
+                        <br/>
+          </div> 
+
+          <div class="form-group">
+              <label for="role">Role</label>
+             <select class="form-control" id="role" [(ngModel)]="user.role" name="role">
+              <option value="">Select Role</option>
+              <option value="ADMIN" *ngIf="adminChk">ADMIN</option>
+              <option value="FACULTY" *ngIf="adminChk">FACULTY</option>
+              <option value="USER" *ngIf="adminChk">USER</option>
+            </select>
+            </div> 
+
+            <div class="form-group">
+              <label for="course_id">Course Id</label>
+              <input type="number" class="form-control" id="course_id"
+              [(ngModel)]="user.courseId" name="course_id">
+              <span [hidden]="user.courseId">Please Enter Course ID.</span>
+                        <br/>
+            </div> 
+
+            <div class="form-group">
+              <label for="prn">PRN</label>
+              <input type="number" class="form-control" id="prn"
+              [(ngModel)]="user.prn" name="prn">
+              <span [hidden]="user.prn">Please Enter PRN.</span>
+                        <br/>
+            </div> 
+
+            <div class="form-group">
+              <button type="button" class="btn btn-primary" (click)="saveUser(user,userForm)" [disabled]="!user.firstName || !user.lastName || !user.email || !user.password || !user.contactNumber">Submit</button>
+            </div>
+</form>
+</div>
+</div>
+</div>
+<a style="color:blue" mat-raised-button routerLink="/admindashboard">Back</a>

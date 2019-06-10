@@ -1,0 +1,45 @@
+
+
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="offset-3"></div>
+    <div class="col-md-6" >
+     <form  #moduleForm="ngForm" name="form" #f="ngForm" novalidate class="module-form" >
+          
+        <div class="form-group">
+          <label for="course_id">course_id</label>
+          <input type="text"
+                  id="course_id"
+                  class="form-control"
+                  name="course_id"
+                  [(ngModel)]="module.courseId"
+                  placeholder="course_id" required readonly>
+      </div>
+      <div class="form-group">
+        <label for="module_name">module_name</label>
+        <input type="text"
+                id="module_name"
+                class="form-control"
+                name="module_name"
+                [(ngModel)]="module.moduleName"
+                placeholder="module_name" required>
+    </div>
+  <hr>
+  
+
+  <button (click)="saveModule(module,moduleForm)" class="btn btn-info pull-right" [disabled]="!module.courseId || !module.moduleName">
+          
+      <span>That's All</span> 
+   </button>
+   <button (click)="moveNext(module,moduleForm)" class="btn btn-info pull-right">
+          
+      <span>Add More Module</span> 
+   </button>
+ </form>
+</div>
+</div>
+</div>
+<a style="color:blue" routerLink="/admindashboard">Back</a>

@@ -1,0 +1,31 @@
+
+<br><br><br><br><br>
+
+
+
+    <div class="container">
+        <div class="row">
+          <div class="offset-3"></div>
+          <div class="col-md-6">
+            <form  #AllcourseForm="ngForm" name="form" #f="ngForm" novalidate class="All-course-form">
+              
+             
+              <div class="form-group">
+                <label for="courseId">Enter Course Id</label>
+                <input type="number"
+                        id="courseId"
+                        class="form-control"
+                        name="courseId"
+                        [(ngModel)]="courseId"
+                        placeholder="course_Id" required>
+            </div>
+            
+      
+      <button (click)="setCourseId(courseId)" class="btn btn-info" [disabled]="!courseId">    
+            <span>Submit</span> 
+         </button>
+       </form>
+      </div>
+      </div>
+      </div>
+      <a style="color:blue" routerLink="/admindashboard">Back</a>

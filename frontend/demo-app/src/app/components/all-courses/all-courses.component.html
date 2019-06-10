@@ -1,0 +1,63 @@
+<div class="container">
+  <div class="row">
+    <div class="offset-3"></div>
+    <div class="col-md-6">
+      <form  #AllcourseForm="ngForm" name="form" #f="ngForm" novalidate class="All-course-form">
+        
+       
+        <div class="form-group">
+          <label for="courseName">course_Name</label>
+          <input type="text"
+                  id="courseName"
+                  class="form-control"
+                  name="courseName"
+                  [(ngModel)]="Allcourse.courseName"
+                  placeholder="course_Name" required>
+      </div>
+      <div class="form-group">
+        <label for="duration">course duration</label>
+        <input type="number"
+                id="duration"
+                class="form-control"
+                name="duration"
+                [(ngModel)]="Allcourse.duration"
+                placeholder="course duration" required>
+    </div>
+    <div class="form-group">
+      <label for="fees">course fee</label>
+      <input type="number"
+              id="fees"
+              class="form-control"
+              name="fees"
+              [(ngModel)]="Allcourse.fees"
+              placeholder="course fee" required>
+  </div>
+  <div class="form-group">
+    <label for="moduleCount">module count</label>
+    <input type="number"
+            id="moduleCount"
+            class="form-control"
+            name="moduleCount"
+            [(ngModel)]="Allcourse.moduleCount"
+            placeholder="module count" required>
+</div>
+<div class="form-group">
+  <label for="roomId">room Id</label>
+  <input type="number"
+          id="roomId"
+          class="form-control"
+          name="roomId"
+          [(ngModel)]="Allcourse.roomId"
+          placeholder="room Id" required>
+</div>
+
+
+<button (click)="saveAllCourse(Allcourse,AllcourseForm)" class="btn btn-info pull-right" [disabled]="!Allcourse.courseName || !Allcourse.duration || !Allcourse.fees || !Allcourse.moduleCount || !Allcourse.roomId">
+          
+          
+      <span>enter course details</span> 
+   </button>
+ </form>
+</div>
+</div>
+</div>

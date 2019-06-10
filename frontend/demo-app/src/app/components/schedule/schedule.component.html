@@ -1,0 +1,145 @@
+<div class="container">
+  <div class="row">
+    <div class="offset-3"></div>
+    <div class="col-md-6">
+      <form  #scheduleForm="ngForm" name="form" #f="ngForm" novalidate class="login-form">
+        
+        <div class="form-group">
+            <label for="course_id">course_id</label>
+            <input type="text"
+                    id="course_id"
+                    class="form-control"
+                    name="course_id"
+                    [(ngModel)]="schedule.courseId"
+                    placeholder="course_id" required>
+        </div>
+        <div class="form-group">
+          <label for="date">Date</label>
+          <input type="date"
+                  id="date"
+                  class="form-control"
+                  name="date"
+                  [(ngModel)]="schedule.date"
+                  placeholder="date" >
+      </div>
+      <div class="form-group">
+        <label for="from1">1.from</label>
+        <input type="time"
+                id="from1"
+                class="form-control"
+                name="from1"
+                [(ngModel)]="schedule.from1"
+                placeholder="1.from" >
+    </div>
+    <div class="form-group">
+      <label for="from2">2.from</label>
+      <input type="time"
+              id="from2"
+              class="form-control"
+              name="from2"
+              [(ngModel)]="schedule.from2"
+              placeholder="2.from" >
+  </div>
+  <div class="form-group">
+    <label for="subject1_id">subject1_id</label>
+    <input type="number"
+            id="subject1_id"
+            class="form-control"
+            name="subject1_id"
+            [(ngModel)]="schedule.subject1Id"
+            placeholder="subject1_id" >
+</div>
+<div class="form-group">
+  <label for="subject2_id">subject2_id</label>
+  <input type="number"
+          id="subject2_id"
+          class="form-control"
+          name="subject2_id"
+          [(ngModel)]="schedule.subject2Id"
+          placeholder="subject2_id" >
+</div>
+<div class="form-group">
+  <label for="teacher1_name">teacher1_name</label>
+  <input type="text"
+          id="teacher1_name"
+          class="form-control"
+          name="teacher1_name"
+          [(ngModel)]="schedule.teacherName1"
+          placeholder="teacher1_id">
+</div>
+
+<div class="form-group">
+  <label for="teacher2_name">teacher2_name</label>
+  <input type="text"
+          id="teacher2_name"
+          class="form-control"
+          name="teacher2_name"
+          [(ngModel)]="schedule.teacherName2"
+          placeholder="teacher2_name" >
+</div>
+<div class="form-group">
+  <label for="to1">to.1</label>
+  <input type="time"
+          id="to1"
+          class="form-control"
+          name="to1"
+          [(ngModel)]="schedule.to1"
+          placeholder="to1" >
+</div>
+<div class="form-group">
+  <label for="to2">to.2</label>
+  <input type="time"
+          id="to2"
+          class="form-control"
+          name="to2"
+          [(ngModel)]="schedule.to2"
+          placeholder="to2" >
+</div>
+<div class="form-group">
+  <label for="type1">class type1</label>
+  <input type="text"
+          id="type1"
+          class="form-control"
+          name="type1"
+          [(ngModel)]="schedule.type1"
+          placeholder="type1" >
+</div>        
+<div class="form-group">
+  <label for="type2">class type2</label>
+  <input type="text"
+          id="type2"
+          class="form-control"
+          name="type2"
+          [(ngModel)]="schedule.type2"
+          placeholder="type2" >
+</div>
+<div class="form-group">
+    <label for="room_id1">room_id1</label>
+    <input type="number"
+            id="room_id1"
+            class="form-control"
+            name="room_id1"
+            [(ngModel)]="schedule.roomId1"
+            placeholder="room_id1" >
+  </div>
+  <div class="form-group">
+      <label for="room_id2">room_id2</label>
+      <input type="number"
+              id="room_id2"
+              class="form-control"
+              name="room_id2"
+              [(ngModel)]="schedule.roomId2"
+              placeholder="room_id2" >
+    </div>
+
+    <button (click)="saveSchedule(schedule,scheduleForm)" class="btn btn-info pull-right" [disabled]="!schedule.courseId || !schedule.date || !schedule.from1 || !schedule.from2 || !schedule.to1 || !schedule.to2 || !schedule.teacherName1 || !schedule.teacherName2 || !schedule.subject1Id || !schedule.subject2Id || !schedule.type1 || !schedule.type2 || !schedule.roomId1 || !schedule.roomId2">
+
+          
+           <span>save schedule</span> 
+        </button>
+      </form>
+    </div>
+    </div>
+    </div>
+      
+    <a style="color:blue" routerLink="/admindashboard">Back</a>

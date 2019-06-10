@@ -1,0 +1,31 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-dark fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand" [routerLink]="['/home']" style="color:white">Training management</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/about']" *ngIf="!currentStatus.status">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/services']" *ngIf="!currentStatus.status">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/contact']" *ngIf="!currentStatus.status">Contact</a>
+          </li>
+          
+        
+        
+          <form class="form-inline my-2 my-lg-0">
+            <a class="nav-link " href="javascript:void(0)" [routerLink]="['/signup']" routerLinkActive *ngIf="!currentStatus.status && roleAdmin">Signup</a>
+            <a class="nav-link" href="javascript:void(0)" [routerLink]="['/login']" routerLinkActive *ngIf="!currentStatus.status">Login</a>
+            <a class="nav-link" href="javascript:void(0)" (click)="logout()" *ngIf="currentStatus.status">Logout</a>
+          </form>
+        
+        </ul>
+      </div>
+    </div>
+  </nav>

@@ -1,0 +1,29 @@
+
+ 
+          
+    
+<div>
+<form class="form-group">
+    <label for="email">enter the date:</label>
+<input type="date" name="date" [(ngModel)]="date1.date" class="form-control" required/>
+<span id="color" [hidden]="date1.date" >Please Enter a Date.</span>
+<br/>
+<br/>
+<button (click)="calc(date1)" class="btn btn-info" [disabled]="!date1.date">
+  
+   <span>get schedule</span> 
+</button>
+</form>
+
+</div>
+
+
+<div>
+<table mat-table *ngIf="table_show" class="table">
+<tr> <th> Class type           </th><th>Module id</th>              <th>faculty</th>                <th>Venue</th>             <th>Timing:start</th>     <th>Timing:end</th></tr>
+<tr><td>{{schDets.type1}}</td> <td>{{schDets.subject1Id}}</td> <td>{{schDets.teacherName1}}</td> <td>{{schDets.roomId1}}</td><td>{{schDets.from1}}</td><td>{{schDets.to1}}</td></tr>
+<tr><td>{{schDets.type2}}</td> <td>{{schDets.subject2Id}}</td> <td>{{schDets.teacherName2}}</td> <td>{{schDets.roomId2}}</td><td>{{schDets.from2}}</td><td>{{schDets.to2}}</td></tr>
+
+</table>
+</div>
+<a mat-raised-button (click)="userCheck()">Back</a>
